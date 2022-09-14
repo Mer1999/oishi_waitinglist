@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>new customer</title>
+    <style>
+        #div_title {
+            width: 100%;
+            height: 20%;
+            text-align: center;
+        }
+        #div_table{
+            width:100%;
+            text-align: center;
+        }
+        p {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 300%;
+            letter-spacing: 10px;
+        }
+        #div_bottom {
+            position: absolute;
+            bottom:100px;
+            width: 100%;
+            text-align: center;
+        }
+        #p_bottom {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            margin: auto;
+            font-size: 150%;
+            letter-spacing: 0px;
+        }
+        form{
+            width:100%;
+            height:500px;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size:200%;
+            margin-top: 300px;
+        }
+        input{
+            height:60px;
+            width:70%;
+            font-size: 100%;
+        }
+        #btn_change{
+            margin-top: 100px;
+            width:60%;
+            height:100px;
+        }
+    </style>
+</head>
+<script>
+    const WIN_HEIGHT=window.innerHeight
+    window.addEventListener('resize',()=>{
+        if(window.innerHeight<WIN_HEIGHT){
+            var t=document.getElementById("div_bottom");
+            t.style.display='none';
+        }else{
+            var t=document.getElementById("div_bottom");
+            t.style.display='block';
+        }
+    })
+</script>
+<body>
+    <div id="div_title">
+        <p>
+            oishi | 開丼
+        </p>
+        <p>
+            INFO CHANGE
+        </p>
+    </div>
+    
+    <form action="phoneinput.php" method="POST">
+        <div id="div_table">
+        <lable for="phone">PLEASE INPUT YOUR PHONE NUMBER:</lable>
+        <input id="phone" name="phone" type="text" maxlength="10" required/><br />
+        <input id="btn_change" type="submit" value="CONFIRM"><br />
+        </div>
+    </form>
+    <div id='div_bottom'>
+        <p id='p_bottom'>
+            oishi online waitinglist v0.1.0 </br>
+            made by Andy (also the waiter ('ᴗ' )و)
+        </p>
+    </div>
+</body>
+
+</html>
